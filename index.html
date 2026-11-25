@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#12141a" />
+    <title>Fray</title>
+    <style>:root{--u:1px;--bg:#12141a;--hud:#e8eef8;--player:#d6ff4b;--player-deep:#8fb820;--danger:#ff3b4a;--scrap:#ffe566;--super:#ffb347;--display:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;--ui:"Segoe UI", "Helvetica Neue", sans-serif;--touch:clamp(64px, 18vmin, 100px);--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark}*{box-sizing:border-box}[hidden]{display:none!important}html,body{height:100%;color:var(--hud);font-family:var(--ui);-webkit-user-select:none;-moz-user-select:none;user-select:none;touch-action:none;background:#0a0b10;margin:0;overflow:hidden}#stage{width:calc(var(--u) * 960);height:calc(var(--u) * 540);background:var(--bg);position:absolute;top:50%;left:50%;overflow:hidden;transform:translate(-50%,-50%)}#game{width:100%;height:100%;display:block}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation;border:0;margin:0}button:focus-visible{outline:3px solid var(--player);outline-offset:3px}#hud-top{top:calc(var(--u) * 8);right:calc(var(--u) * 8);z-index:5;position:absolute}.hud-btn{width:max(calc(var(--u) * 28), 28px);height:max(calc(var(--u) * 28), 28px);color:var(--hud);background:#00000059;border-radius:4px;place-items:center;display:grid}.hud-btn svg{fill:none;stroke:currentColor;stroke-width:2.2px;stroke-linecap:round;stroke-linejoin:round;width:70%;height:70%}#btn-mute .off,#btn-mute[aria-pressed=true] .on{display:none}#btn-mute[aria-pressed=true] .off{display:inline}.overlay{z-index:10;justify-content:center;align-items:center;gap:calc(var(--u) * 12);padding:calc(var(--u) * 20);text-align:center;background:#0a0b10e0;flex-direction:column;display:flex;position:absolute;top:0;bottom:0;left:0;right:0}.logo{font-family:var(--display);font-size:calc(var(--u) * 120);letter-spacing:.02em;color:var(--player);text-shadow:0 calc(var(--u) * 6) 0 var(--player-deep);margin:0;line-height:.9}.tagline{font-size:calc(var(--u) * 20);opacity:.85;margin:0}.best{font-size:calc(var(--u) * 14);opacity:.55;margin:0}.primary{min-width:calc(var(--u) * 200);padding:calc(var(--u) * 14) calc(var(--u) * 28);background:var(--player);color:#12141a;font-size:max(calc(var(--u) * 22), 15px);box-shadow:0 calc(var(--u) * 5) 0 var(--player-deep);border-radius:4px;font-weight:900}.primary:active{transform:translateY(calc(var(--u) * 4));box-shadow:0 calc(var(--u) * 1) 0 var(--player-deep)}.controls{margin:calc(var(--u) * 8) 0 0;max-width:48ch;font-size:max(calc(var(--u) * 13), 11px);opacity:.55;line-height:1.45}.end-title{font-family:var(--display);font-size:calc(var(--u) * 64);margin:0;line-height:1}.end-stats{margin:0 0 calc(var(--u) * 10);font-size:calc(var(--u) * 20)}#shop,#choose{z-index:12;justify-content:center;align-items:center;gap:calc(var(--u) * 10);padding:calc(var(--u) * 16);background:#08090eeb;flex-direction:column;display:flex;position:absolute;top:0;bottom:0;left:0;right:0}#shop h2,#choose h2{font-family:var(--display);font-size:calc(var(--u) * 42);color:var(--scrap);letter-spacing:.04em;margin:0}#choose h2{color:var(--player)}.shop-meta{gap:calc(var(--u) * 18);font-weight:700;font-size:max(calc(var(--u) * 14), 12px);display:flex}#shop-scrap,#choose-scrap{color:#7cf0ff}.shop-card em{color:#7cf0ff!important}#shop-items{gap:calc(var(--u) * 10);max-width:calc(var(--u) * 720);flex-wrap:wrap;justify-content:center;display:flex}.shop-card{width:calc(var(--u) * 200);padding:calc(var(--u) * 12);text-align:left;gap:calc(var(--u) * 4);background:#1a1e28;border:2px solid #2a3142;border-radius:6px;flex-direction:column;display:flex}.shop-card:hover:not(:disabled){border-color:var(--player)}.shop-card.locked,.shop-card:disabled{opacity:.4;cursor:default}.shop-card strong{font-size:max(calc(var(--u) * 16), 13px);color:var(--hud)}.shop-card span{font-size:max(calc(var(--u) * 12), 11px);opacity:.7;min-height:2.4em}.shop-card em{color:var(--scrap);font-style:normal;font-weight:800;font-size:max(calc(var(--u) * 14), 12px)}#btn-next{margin-top:calc(var(--u) * 6);padding:calc(var(--u) * 12) calc(var(--u) * 26);background:var(--player);color:#12141a;font-weight:900;font-size:max(calc(var(--u) * 18), 14px);border-radius:4px}.choose-actions{gap:calc(var(--u) * 14);margin-top:calc(var(--u) * 8);flex-wrap:wrap;justify-content:center;display:flex}.choose-card{width:calc(var(--u) * 260);padding:calc(var(--u) * 18) calc(var(--u) * 16);text-align:left;gap:calc(var(--u) * 8);background:#1a1e28;border:2px solid #2a3142;border-radius:6px;flex-direction:column;display:flex}.choose-card:hover{border-color:var(--player)}.choose-card.boss{border-color:var(--danger)}.choose-card.boss:hover{border-color:#ff7a88}.choose-card strong{font-family:var(--display);font-size:max(calc(var(--u) * 28), 18px);letter-spacing:.03em}.choose-card span{font-size:max(calc(var(--u) * 13), 12px);opacity:.7;line-height:1.35}.choose-card.boss strong{color:var(--danger)}#toast{left:50%;bottom:calc(var(--u) * 90);z-index:20;padding:calc(var(--u) * 8) calc(var(--u) * 14);background:var(--hud);color:#12141a;font-weight:700;font-size:max(calc(var(--u) * 13), 12px);border-radius:4px;position:absolute;transform:translate(-50%)}#touch{z-index:15;padding:0 max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));pointer-events:none;justify-content:space-between;align-items:flex-end;display:flex;position:fixed;top:auto;bottom:0;left:0;right:0}#touch>*{pointer-events:auto;touch-action:none}.stick{width:var(--touch);height:var(--touch);background:#0a0b108c;border:2px solid #e8eef873;border-radius:50%;position:relative}.stick[data-on]{border-color:var(--player);background:#d6ff4b33}.stick:after{content:"";background:#e8eef859;border-radius:50%;position:absolute;top:32%;bottom:32%;left:32%;right:32%}#t-aim[data-on]{border-color:var(--danger);background:#ff3b4a33}#t-right{flex-direction:column;align-items:center;gap:10px;display:flex}.touch-row{gap:8px;display:flex}#t-super,#t-slash,#t-dash{min-width:calc(var(--touch) * .62);height:calc(var(--touch) * .42);font-weight:900;font-size:calc(var(--touch) * .14);color:#12141a;border:0;border-radius:8px}#t-super{background:#ffb347e6}#t-slash{background:#e8fff0e6}#t-dash{background:#d6ff4be6}#t-super[data-on],#t-slash[data-on],#t-dash[data-on]{filter:brightness(1.15)}</style>
+    <script type="module" crossorigin src="./assets/index-CwWkHN3k.js"></script>
+  </head>
+  <body>
+    <div id="stage">
+      <canvas id="game"></canvas>
+      <div id="hud-top">
+        <button id="btn-mute" class="hud-btn" type="button" aria-label="Mute" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 9.5v5h3.5L12 18V6L7.5 9.5z" />
+            <path class="on" d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a7.6 7.6 0 0 1 0 11" />
+            <path class="off" d="M16 9.5l5 5M21 9.5l-5 5" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="title" class="overlay" hidden>
+        <h1 class="logo">FRAY</h1>
+        <p class="tagline">5 zones. Mini-bosses. One Overseer.</p>
+        <p id="best-stats" class="best"></p>
+        <button id="btn-play" class="primary" type="button">FIGHT</button>
+        <p id="controls" class="controls">
+          WASD move · Mouse aim (auto-fire) · Shift dash · Space slash (1.5s CD) · Q / RMB laser.
+          Mobile: left stick move · right stick aim · DASH · SLASH · LASER. Walk over buffs to pick them up.
+          Survive the shrink → wave → mini-boss → gold ELITE → next zone. After 5: the Overseer.
+        </p>
+      </div>
+
+      <div id="end" class="overlay" hidden>
+        <h2 id="end-title" class="end-title">YOU ARE SCRAP</h2>
+        <p id="end-stats" class="end-stats"></p>
+        <button id="btn-again" class="primary" type="button">AGAIN</button>
+      </div>
+
+      <div id="shop" hidden>
+        <h2>ARMORY</h2>
+        <p id="shop-hint" style="margin:0;opacity:0.7;font-size:max(calc(var(--u)*14),12px)">Free salvage — take any of these (each once).</p>
+        <div class="shop-meta">
+          <span id="shop-scrap">MODS 0</span>
+          <span id="shop-hp">HP 100/100</span>
+          <span id="shop-wave">ZONE 1 CLEAR</span>
+        </div>
+        <div id="shop-items"></div>
+        <button id="btn-next" type="button">SKIP →</button>
+      </div>
+
+      <div id="choose" hidden>
+        <h2>WHAT NEXT?</h2>
+        <p style="margin:0;opacity:0.7;font-size:max(calc(var(--u)*14),12px)">Deeper zones shrink faster. Or face the Warden with what you have.</p>
+        <div class="shop-meta">
+          <span id="choose-scrap">MODS 0</span>
+          <span id="choose-hp">HP 100/100</span>
+          <span id="choose-zone">NEXT ZONE 2</span>
+        </div>
+        <div class="choose-actions">
+          <button id="btn-farm" class="choose-card" type="button">
+            <strong>KEEP FARMING</strong>
+            <span>Next zone is larger, shrinks harder, and pays more scrap. Grow before the boss.</span>
+          </button>
+          <button id="btn-boss" class="choose-card boss" type="button">
+            <strong>FIGHT WARDEN</strong>
+            <span>Face the boss with what you have. No more upgrades after this.</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="toast" role="status" hidden></div>
+    </div>
+
+    <div id="touch" hidden>
+      <div id="t-move" class="stick" aria-label="Move"></div>
+      <div id="t-right">
+        <div class="touch-row">
+          <button id="t-dash" type="button" aria-label="Dash">DASH</button>
+          <button id="t-slash" type="button" aria-label="Slash">SLASH</button>
+          <button id="t-super" type="button" aria-label="Laser">LASER</button>
+        </div>
+        <div id="t-aim" class="stick" aria-label="Aim"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
